@@ -25,16 +25,22 @@ Select the badge to open this repository in Home Assistant's **Marketplace**
    Assistant integration** on the Backuparr card, and copy the token.
 2. In Home Assistant, go to **Settings** > **Devices & services** > **Add
    integration** and pick **Backuparr**.
-3. Enter Backuparr's address (as you open it in a browser) and the token.
+3. Enter Backuparr's address, like `https://192.168.1.10:8991`, and the token.
+4. Home Assistant can't check Backuparr's own self-signed certificate, so it
+   shows its fingerprint. Compare it with the one on the Backuparr card
+   (**Settings** > **Server**) and select **Submit** if they match.
 
 ![Connect to Backuparr](https://raw.githubusercontent.com/rsaturns/ha-backuparr/main/images/setup.png)
 
-Backuparr itself serves plain HTTP, and the token goes with every request. If
-Home Assistant reaches Backuparr over a network you don't fully trust, put
-Backuparr behind a reverse proxy with TLS and use its `https://` address.
+![Trust Backuparr's certificate?](https://raw.githubusercontent.com/rsaturns/ha-backuparr/main/images/trust.png)
 
-Leave **Verify SSL certificate** on unless Backuparr's HTTPS certificate is
-self-signed.
+Home Assistant then trusts that certificate, and the renewals Backuparr makes
+itself, and checks it before every request. Behind a reverse proxy with a
+certificate from a real authority, there's nothing to compare.
+
+Leave **Verify SSL certificate** on. Turning it off accepts any certificate,
+so anyone between Home Assistant and Backuparr could read the token.
+Plain `http://` works too, but sends the token readable.
 
 ## Entities
 
@@ -73,6 +79,10 @@ actions:
   **Settings** > **Devices & services**.
 - **Couldn't reach Backuparr:** the entities show as unavailable until
   Backuparr answers again.
+- **Backuparr's certificate changed:** after setting Backuparr up again
+  without its own backup, or changing its certificate. **Settings** >
+  **Repairs** shows the new fingerprint to compare and trust; until then,
+  the token isn't sent.
 - **Change Backuparr's address:** the **Reconfigure** option on the integration.
 - **Diagnostics** leave out Backuparr's address and token.
 

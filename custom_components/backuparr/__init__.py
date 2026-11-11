@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant, callback
-from homeassistant.helpers import device_registry as dr
+from homeassistant.helpers import device_registry as dr, issue_registry as ir
 
 from .const import DOMAIN
-from .coordinator import BackuparrConfigEntry, BackuparrCoordinator
+from .coordinator import BackuparrConfigEntry, BackuparrCoordinator, certificate_issue_id
 
 PLATFORMS: list[Platform] = [Platform.BINARY_SENSOR, Platform.SENSOR]
 
@@ -34,3 +34,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: BackuparrConfigEntry) ->
 async def async_unload_entry(hass: HomeAssistant, entry: BackuparrConfigEntry) -> bool:
     """Unload one Backuparr install."""
     return await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
+
+
+async def async_remove_entry(hass: HomeAssistant, entry: BackuparrConfigEntry) -> None:
+    """Drop a certificate repair left for a removed install."""
+    ir.async_delete_issue(hass, DOMAIN, certificate_issue_id(entry))
