@@ -1,0 +1,15 @@
+{
+  "entity": {
+    "sensor": {
+      "failed_backups": {
+        "default": "mdi:archive-alert-outline"
+      },
+      "last_backup": {
+        "default": "mdi:archive-clock-outline"
+      },
+      "self_last_backup": {
+        "default": "mdi:archive-clock-outline"
+      }
+    }
+  }
+}

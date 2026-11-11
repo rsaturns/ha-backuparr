@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Backuparr itself
+    url: https://github.com/rsaturns/backuparr/issues
+    about: Problems with Backuparr's backups, restores or web UI go to Backuparr's tracker.
+  - name: Security vulnerability
+    url: https://github.com/rsaturns/ha-backuparr/security/advisories/new
+    about: Please report security problems privately.

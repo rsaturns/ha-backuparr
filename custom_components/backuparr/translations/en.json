@@ -1,0 +1,100 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This Backuparr is already set up.",
+      "reauth_successful": "The new token works.",
+      "reconfigure_successful": "Backuparr's address is updated."
+    },
+    "error": {
+      "cannot_connect": "Couldn't reach Backuparr. Check the address, and that Backuparr is running.",
+      "certificate": "Backuparr's certificate couldn't be verified. If it uses a self-signed certificate, turn off Verify SSL certificate.",
+      "invalid_auth": "Backuparr didn't accept the token. Copy it again, or make a new one on Backuparr's card.",
+      "invalid_url": "Enter an address starting with http:// or https://.",
+      "not_enabled": "Backuparr answered, but its Home Assistant integration is off. Switch it on in Backuparr (Settings, Server, Backuparr card). It needs Backuparr 3.0 or later.",
+      "rate_limited": "Backuparr is refusing this address for a while after too many wrong tokens. Try again in a few minutes.",
+      "unexpected_response": "That address answered, but not like Backuparr does.",
+      "unknown": "Something unexpected went wrong. The Home Assistant log has the details."
+    },
+    "step": {
+      "reauth_confirm": {
+        "data": {
+          "token": "Token"
+        },
+        "data_description": {
+          "token": "Switch on Enable Home Assistant integration on Backuparr's card, or select New token, and copy the token it shows."
+        },
+        "description": "Backuparr at {url} no longer accepts the token. Enter a new one.",
+        "title": "New Backuparr token"
+      },
+      "reconfigure": {
+        "data": {
+          "url": "Address",
+          "verify_ssl": "Verify SSL certificate"
+        },
+        "data_description": {
+          "url": "Backuparr's address, as you open it in a browser, like `{proxy_url}` behind a reverse proxy, or `{local_url}`.",
+          "verify_ssl": "Leave on unless Backuparr's HTTPS certificate is self-signed."
+        },
+        "title": "Change Backuparr's address"
+      },
+      "user": {
+        "data": {
+          "token": "Token",
+          "url": "Address",
+          "verify_ssl": "Verify SSL certificate"
+        },
+        "data_description": {
+          "token": "In Backuparr: Settings, Server, switch on Enable Home Assistant integration on the Backuparr card, and copy the token.",
+          "url": "Backuparr's address, as you open it in a browser, like `{proxy_url}` behind a reverse proxy, or `{local_url}`.",
+          "verify_ssl": "Leave on unless Backuparr's HTTPS certificate is self-signed."
+        },
+        "description": "Shows whether each app's latest backup worked. Needs Backuparr 3.0 or later.",
+        "title": "Connect to Backuparr"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "all_backups": {
+        "name": "All backups"
+      },
+      "app_problem": {
+        "name": "{app}"
+      },
+      "self_problem": {
+        "name": "Own backup"
+      }
+    },
+    "sensor": {
+      "failed_backups": {
+        "name": "Failed backups"
+      },
+      "last_backup": {
+        "name": "{app} last backup"
+      },
+      "self_last_backup": {
+        "name": "Own last backup"
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Couldn't reach Backuparr."
+    },
+    "certificate": {
+      "message": "Backuparr's certificate couldn't be verified."
+    },
+    "invalid_auth": {
+      "message": "Backuparr didn't accept the token."
+    },
+    "not_enabled": {
+      "message": "Backuparr's Home Assistant integration is switched off."
+    },
+    "rate_limited": {
+      "message": "Backuparr is refusing requests for a while after too many wrong tokens."
+    },
+    "unexpected_response": {
+      "message": "Backuparr's answer wasn't a status."
+    }
+  }
+}

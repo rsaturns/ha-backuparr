@@ -1,0 +1,6 @@
+# CodeQL configuration, used by .github/workflows/codeql.yml.
+name: ha-backuparr CodeQL
+
+# Test fixtures hold fake tokens and URLs; they never ship.
+paths-ignore:
+  - tests

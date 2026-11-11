@@ -1,0 +1,19 @@
+version: 2
+# One weekly PR per ecosystem. pip covers the test harness, which pins the
+# Home Assistant release the tests run against.
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      pip:
+        patterns: ["*"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        patterns: ["*"]
