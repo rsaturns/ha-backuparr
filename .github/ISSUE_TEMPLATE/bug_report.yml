@@ -1,0 +1,44 @@
+name: Bug report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what actually happened.
+    validations:
+      required: true
+
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version
+      description: Settings > Devices & services > Backuparr shows it, e.g. `1.0.0`.
+    validations:
+      required: true
+
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      description: Settings > About, e.g. `2026.11.1`.
+    validations:
+      required: true
+
+  - type: input
+    id: backuparr_version
+    attributes:
+      label: Backuparr version
+      description: Shown in Backuparr's footer, e.g. `3.0.0`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics or logs
+      description: The integration's diagnostics file (it leaves out Backuparr's address and token), or log lines mentioning `custom_components.backuparr`.
+      render: shell
+    validations:
+      required: false

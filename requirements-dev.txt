@@ -1,0 +1,4 @@
+# Home Assistant's test harness, pinned to the release it ships with
+# (it pins homeassistant itself). Dependabot keeps both up to date.
+pytest-homeassistant-custom-component==0.13.375
+ruff==0.17.4
