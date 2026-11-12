@@ -21,10 +21,7 @@ To add it by hand instead:
    select **Add**.
 4. Select **Backuparr** in the list, then select **Install**.
 
-Adding a repository from a link needs a GitHub connection. If you haven't
-connected GitHub yet, the Marketplace asks you to: you enter a code it shows
-on GitHub, so your GitHub password never goes into Home Assistant. See
-[Custom repositories](https://www.home-assistant.io/integrations/marketplace/#custom-repositories)
+See [Custom repositories](https://www.home-assistant.io/integrations/marketplace/#custom-repositories)
 in Home Assistant's docs.
 
 On Home Assistant 2026.10, in HACS: select the three dots menu >
