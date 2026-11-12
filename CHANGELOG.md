@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- The README has steps for adding the repository to the Marketplace by hand, and to HACS on Home Assistant 2026.10 (#4).
+
 ## [1.0.0] - 2026-11-10
 
 ### Added
