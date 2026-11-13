@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- The Marketplace's dark theme has Backuparr's icon to show: the integration ships dark_icon.png and dark_icon@2x.png, the same logo, which works on dark too.
+
 ### Changed
 - The README has steps for adding the repository to the Marketplace by hand, and to HACS on Home Assistant 2026.10 (#4).
 
