@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-23
+
 ### Fixed
 - The Marketplace's dark theme has Backuparr's icon to show: the integration ships dark_icon.png and dark_icon@2x.png, the same logo, which works on dark too.
 
