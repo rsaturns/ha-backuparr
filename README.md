@@ -10,23 +10,23 @@ backups worked, and use it in dashboards and automations.
 
 [![Open your Home Assistant instance and open this repository.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rsaturns&repository=ha-backuparr&category=integration)
 
-Select the badge to open this repository in Home Assistant's **Marketplace**
-(2026.11 and later) or in HACS, then select **Install** (**Download** in HACS).
+Backuparr is in the Marketplace's catalog, so there's no link to add and no
+GitHub account to connect. Select the badge to open it in Home Assistant's
+**Marketplace** (2026.11 and later) or in HACS, then select **Install**
+(**Download** in HACS).
 
-To add it by hand instead:
+Or find it yourself:
 
 1. In Home Assistant, go to **Settings** > **Marketplace**.
-2. In the upper-right corner, select **Add from link**.
-3. Under **GitHub link**, enter `https://github.com/rsaturns/ha-backuparr` and
-   select **Add**.
-4. Select **Backuparr** in the list, then select **Install**.
+2. Search for **Backuparr** and select it.
+3. Select **Install**, then **Install** again in the dialog.
 
-See [Custom repositories](https://www.home-assistant.io/integrations/marketplace/#custom-repositories)
-in Home Assistant's docs.
+See [Installing a repository](https://www.home-assistant.io/integrations/marketplace/#installing-a-repository)
+in Home Assistant's docs. On Home Assistant 2026.10, open HACS, search for
+**Backuparr**, select it, and select **Download**.
 
-On Home Assistant 2026.10, in HACS: select the three dots menu >
-**Custom repositories**, enter `https://github.com/rsaturns/ha-backuparr`,
-pick **Integration** as the type, and select **Add**.
+Added it from a link before? There's nothing to do: the Marketplace treats it
+as a catalog repository by itself.
 <!-- ha-marketplace:exclude-end -->
 
 ## Requirements
